@@ -1,0 +1,109 @@
+body {
+padding: 100px;
+/* font-family: 'Varela Round', sans-serif; */
+}
+
+.submit-area{
+	box-shadow: 5px 5px 10px gray;
+	margin-top: 50px;
+	padding: 40px;
+	border-radius: 20px;
+}
+h1{
+	font-size: 50px;
+}
+h2{
+	font-size = 35px;
+}
+.form-1{
+	display: block;
+    width: 100%;
+    height: calc(2.25rem + 3px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #574953;
+    background-color: rgb(107, 107, 231);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 13px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn{
+	background-color: greenyellow;
+}
+.transaction-area{
+	display: none;
+}
+
+.first{
+	background-color: rgb(226, 76, 151);
+}
+
+.second{
+	background-color: greenyellow;
+}
+
+.third{
+	background-color: rgb(190, 17, 190);
+}
+
+.divo {
+	margin : 0 40px;
+	padding : 20px;
+	border-radius: 10px;
+	color: white;
+	font-size: 40px;
+	font-weight: 900;
+}
+
+.divc-1{
+
+	margin : 80px 15px 30px 50px;
+	padding: 50px;
+	
+	box-shadow: 5px 5px 10px gray;
+	background-color: rgb(233, 132, 16);
+	border-radius: 7px;
+}
+
+.divc-2{
+
+	
+	margin : 80px 50px 30px 15px;
+	padding: 50px;
+	
+	box-shadow: 5px 5px 10px gray;
+	background-color: rgb(9, 236, 149);
+	border-radius: 7px;
+}
+
+.tbtn{
+	display: inline-block;
+font-weight: 400;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+border: 1px solid transparent;
+padding: .375rem .75rem;
+font-size: 1rem;
+line-height: 1.5;
+background-color: khaki;
+border-radius: .25rem;
+transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.inpu{
+	width: 90%;
+	display: block;
+	height: 40px ;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px gray;
+	padding: 0px 0px 0px 12px;
+	
+}

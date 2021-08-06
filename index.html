@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>my-bank</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="login-area" id="first">
+		<h1 class="text-center font-wide-bold">Welcome To My Bank</h1>
+		<div class="submit-area">
+			<h2 class="login-1">Login</h2>
+			<input type="text " name="" id="" class="form-1" id="form-1" placeholder="Enter Your Mail">
+			<br>
+			<input type="password" name="" id="" class="form-1" placeholder="Enter Your password">
+			<br>
+			<button class="btn" id="login">Enter</button>
+		</div>
+	</div>
+
+
+	<div class="transaction-area" id=second>
+		<div class="row">
+			<div class="col-md-4 deposit" id="deposit">
+				<div class="first divo">
+					<p class="qr">Deposit</p>
+					<p class="qrs">$ <span id= "eDeposit" >1000.00</span> </p>
+				</div>
+			</div>
+
+			<div class="col-md-4 balance" id="balance">
+				<div class="second divo">
+					<p class="qr" >Balance</p>
+					<p class="qrs">$ <span id="pBalance" >3000.00</span> </p>
+				</div>
+			</div>
+
+			<div class="col-md-4 withdraw" id="withdraw">
+				<div class="third divo">
+					<p class="qr">Withdraw</p>
+					<p class="qrs">$ <span id="eWithdraw">500.00</span> </p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="div row">
+			<div class="col-md-6">
+				<div class="adddeposit divc-1">
+					<h4>Deposit</h4>
+				<input type="text" name="" id="dinput" class="depo inpu" placeholder="$ Amount you want to Deposit">
+				<br>
+				<button type="submit" class="tbtn" id="dbtn">Deposit</button>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="addwithdraw divc-2">
+					<h4>Withdraw</h4>
+				<input type="text" name="" id="winput" class= "withd inpu"; placeholder="$ Amount you want to Withdraw">
+			<br>
+				<button type="submit" class="tbtn" id="wbtn">Withdraw</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		const logInBtn = document.getElementById("login")
+		logInBtn.addEventListener('click', function () {
+			const loginArea = document.getElementById("first")
+			loginArea.style.display = "none"
+			const transactionArea = document.getElementById("second")
+			transactionArea.style.display = "block"
+		})
+
+
+		const depositAmount = document.getElementById("dbtn")
+		depositAmount.addEventListener("click", function () {
+		
+		const updateDeposit = document.getElementById("dinput").value
+		
+			const roundDeposit = parseFloat(updateDeposit)
+			
+			// console.log(roundDeposit)
+			const previousDeposit = document.getElementById("eDeposit").innerText
+
+			const previousDepositNumber = parseFloat(previousDeposit)
+
+			// console.log(previousDepositNumber)
+
+			const totalDeposit = roundDeposit + previousDepositNumber
+			console.log(totalDeposit)
+
+
+			document.getElementById("eDeposit").innerText = totalDeposit
+
+
+			const currentBalance = document.getElementById("pBalance").innerText
+
+			const currentBalanceNumber = parseFloat(currentBalance)
+
+			const totalBalance = roundDeposit + currentBalanceNumber
+
+			console.log(totalBalance)
+			 
+			document.getElementById("pBalance").innerText = totalBalance
+		})
+
+
+//  the amount of withdraw amount and withdraw
+
+		const withdrawAmount = document.getElementById("wbtn")
+		withdrawAmount.addEventListener("click", function () {
+		
+		const updateWithdraw = document.getElementById("winput").value
+		
+			const roundWithdraw = parseFloat(updateWithdraw)
+			
+			// console.log(roundDeposit)
+			const previousWithdraw = document.getElementById("eWithdraw").innerText
+
+			const previousWithdrawNumber = parseFloat(previousWithdraw)
+
+			// console.log(previousDepositNumber)
+
+			const totalWithdraw = roundWithdraw + previousWithdrawNumber
+			
+
+
+			document.getElementById("eWithdraw").innerText = totalWithdraw
+
+
+			const currentBalance = document.getElementById("pBalance").innerText
+
+			const currentBalanceNumber = parseFloat(currentBalance)
+
+			const totalBalance = (roundWithdraw * -1) + currentBalanceNumber
+
+			console.log(totalBalance)
+			 
+			document.getElementById("pBalance").innerText = totalBalance
+		})
+
+
+
+
+
+	</script>
+</body>
+
+</html>
